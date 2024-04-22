@@ -1,61 +1,45 @@
-# vite-vanilla-ts-lib-starter
+# vite-starter
 
-The starter is built on top of Vite 5.x and prepared for writing libraries in TypeScript. It generates a hybrid package - both support for CommonJS and ESM modules.
+Стартер построен на базе Vite 5.x и TypeScript. Он генерирует гибридный пакет — как поддержку модулей CommonJS, так и ESM.
 
 ## Features
 
-- Hybrid support - CommonJS and ESM modules
-- IIFE bundle for direct browser support without bundler
-- Typings bundle
-- ESLint - scripts linter
-- Stylelint - styles linter
-- Prettier - formatter
-- Vitest - test framework
-- Husky + lint-staged - pre-commit git hook set up for formatting
-
-## GitHub Template
-
-This is a template repo. Click the green [Use this template](https://github.com/kbysiec/vite-vanilla-ts-lib-starter/generate) button to get started.
+- Гибридная поддержка - модули CommonJS и ESM.
+- Пакет IIFE для прямой поддержки браузера без упаковщика.
+- Набор типов
+- ESLint - линтер скриптов
+- Stylelint - линтер стилей
+- Prettier - форматтер
+- Vitest - тестовая среда
+- Husky + lint-staged
 
 ## Clone to local
 
-If you prefer to do it manually with the cleaner git history
-
 ```bash
-git clone https://github.com/kbysiec/vite-vanilla-ts-lib-starter.git
-cd vite-vanilla-ts-lib-starter
+git clone git@github.com:AlekseyKopasov/vite-starter.git
+cd vite-starter
 npm i
 ```
 
 ## Checklist
+После клонирования репозитория выполнить следующие шаги:
 
-When you use this template, update the following:
-
-- Remove `.git` directory and run `git init` to clean up the history
-- Change the name in `package.json` - it will be the name of the IIFE bundle global variable and bundle files name (`.cjs`, `.mjs`, `.iife.js`, `d.ts`)
-- Change the author name in `LICENSE`
-- Clean up the `README` and `CHANGELOG` files
-
-And, enjoy :)
+- Удалить директорию `.git` и выполнить `git init` для очистки истории коммитов
+- Изменить название проекта в `package.json` - это будет имя глобальной переменной пакета IIFE и имя файла пакета. (`.cjs`, `.mjs`, `.iife.js`, `d.ts`)
+- Очистить файл `README`
 
 ## Usage
 
-The starter contains the following scripts:
+Стартер содержит следующие скрипты:
 
-- `dev` - starts dev server
-- `build` - generates the following bundles: CommonJS (`.cjs`) ESM (`.mjs`) and IIFE (`.iife.js`). The name of bundle is automatically taken from `package.json` name property
-- `test` - starts vitest and runs all tests
-- `test:coverage` - starts vitest and run all tests with code coverage report
-- `lint:scripts` - lint `.ts` files with eslint
-- `lint:styles` - lint `.css` and `.scss` files with stylelint
-- `format:scripts` - format `.ts`, `.html` and `.json` files with prettier
+- `dev` - запуск dev server
+- `build` - генерирует следующие пакеты: CommonJS (`.cjs`) ESM (`.mjs`) и IIFE (`.iife.js`). Имя пакета берется из `package.json`
+- `test` - запускает vitest со всеми тестами
+- `test:coverage` - запускает vitest и запускает все тесты с отчетом о покрытии кода
+- `lint:scripts` - проверяет `.ts` файлы с помощью eslint
+- `lint:styles` - проверяет `.css` и `.scss` файлы с помощью stylelint
+- `format:scripts` - форматирует `.ts`, `.html` и `.json` файлы с помощью prettier
 - `format:styles` - format `.cs` and `.scss` files with stylelint
-- `format` - format all with prettier and stylelint
-- `prepare` - script for setting up husky pre-commit hook
-- `uninstall-husky` - script for removing husky from repository
-
-## Acknowledgment
-
-If you found it useful somehow, I would be grateful if you could leave a star in the project's GitHub repository.
-
-Thank you.
+- `format` - форматирует все с помощь prettier и stylelint
+- `prepare` - script для настройки husky pre-commit hook
+- `uninstall-husky` - script для удаления husky из репозитория
